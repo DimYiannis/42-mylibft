@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 16:07:10 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/06 16:11:26 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/06 17:14:22 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_isalnum(int c)
 	{
 		return (1);
 	}
-    else if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	else if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 	{
 		return (1);
 	}
@@ -27,6 +27,6 @@ int	ft_isalnum(int c)
 // int main(void)
 // {
 //     int x = 1;
-    
+
 //     printf("%d", ft_isalnum(x));
 // }

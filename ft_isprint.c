@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 17:23:34 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/06 17:24:45 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/06 17:25:56 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int	ft_isprint(int c)
 	}
 	return (0);
 }
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void)
-{
-    int c = 0;
-    printf("%d", ft_isprint(c));
-}
+// int main(void)
+// {
+//     int c = 0;
+//     printf("%d", ft_isprint(c));
+// }

@@ -1,22 +1,31 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
-SRCDIR = srcs
-INCDIR = includes
+NAME = libft.a
+
+SRC_DIR = .
+OBJ_DIR = obj
+INC_DIR = .
 
 TARGET = libft.a
-SOURCES = $(SRCDIR)/ft_putchar.c $(SRCDIR)/ft_swap.c $(SRCDIR)/ft_putstr.c $(SRCDIR)/ft_strlen.c $(SRCDIR)/ft_strcmp.c
-OBJECTS = $(SRCDIR)/ft_putchar.o $(SRCDIR)/ft_swap.o $(SRCDIR)/ft_putstr.o $(SRCDIR)/ft_strlen.o $(SRCDIR)/ft_strcmp.o
+SRC = $(wildcard $(SRCDIR))/*.c
+OBJ = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
-all: $(TARGET)
+all: $(NAME)
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 	
-$(TARGET): $(OBJECTS)
-	ar cr $(TARGET) $(OBJECTS)
+$(OBJ_DIR): 
+	mkdir -p $(OBJ_DIR)
 
 clean:
-	rm -f $(OBJECTS)	
+	rm -f $(OBJ)	
 
 fclean: clean
-	rm -f $(TARGET)
+	rm -f $(NAME)
 
 re: fclean all

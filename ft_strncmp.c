@@ -6,13 +6,15 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 18:05:38 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/06 19:00:36 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/07 14:08:56 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+#include <string.h>
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n && (s1[i] || s2[i]))
@@ -35,4 +37,5 @@ int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 // 	char s1[6] = "paokaa";
 // 	char s2[6] = "paokaq";
 // 	printf("%d", ft_strncmp(s1, s2, 6));
+// 	printf("%d", strncmp(s1, s2, 6));
 // }

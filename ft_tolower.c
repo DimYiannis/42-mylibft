@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 18:02:04 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/06 18:03:24 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/07 23:30:33 by yiannis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 	{
@@ -23,5 +23,5 @@ int	ft_toupper(int c)
 // int main(void)
 // {
 //     char c = 'V';
-//     printf("%c", ft_toupper(c));
+//     printf("%c", ft_tolower(c));
 // }

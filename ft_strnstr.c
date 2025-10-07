@@ -6,9 +6,11 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 19:15:45 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/07 14:05:06 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/07 14:12:17 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 static int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
@@ -29,7 +31,7 @@ static int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 	return (0);
 }
 
-char	*ft_strnstr(const char *s1, const char *s2, unsigned int n)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	const char	*haystack;
 	const char	*needle;
@@ -55,11 +57,11 @@ char	*ft_strnstr(const char *s1, const char *s2, unsigned int n)
 	}
 	return (0);
 }
-// #include <stdio.h>
+#include <stdio.h>
 
-// int	main(void)
-// {
-// 	char	s1[10] = "aaaabaaa";
-// 	char	s2[6] = "ab";
-// 	printf("%s", ft_strnstr(s1, s2, 6));
-// }
+int	main(void)
+{
+	char	s1[10] = "aaaabaaa";
+	char	s2[6] = "ab";
+	printf("%s", ft_strnstr(s1, s2, 6));
+}

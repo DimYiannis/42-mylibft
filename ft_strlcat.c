@@ -6,13 +6,13 @@
 /*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 22:37:24 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/08 22:56:49 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/08 22:58:37 by yiannis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int	ft_strlen(char *s)
+static int	ft_strlen(char *s)
 {
 	int	len;
 

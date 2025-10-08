@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 14:15:58 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/07 22:34:34 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/08 10:36:52 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,19 +55,19 @@ int	ft_atoi(const char *str)
 	}
 	if (counter > 1)
 		return (0);
-	return (num * sign);		
+	return (num * sign);
 }
 
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-int	main(void)
-{
-	int val;
-	char *str;
-	str = "+---15+09.10E";
-	val = ft_atoi(str);
-	printf("integral number = %d \n", val);
-	val = atoi(str);
-	printf("integral number = %d", val);
-}
+// int	main(void)
+// {
+// 	int val;
+// 	char *str;
+// 	str = "+---15+09.10E";
+// 	val = ft_atoi(str);
+// 	printf("integral number = %d \n", val);
+// 	val = atoi(str);
+// 	printf("integral number = %d", val);
+// }

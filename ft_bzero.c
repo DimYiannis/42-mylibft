@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 23:13:03 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/07 23:27:02 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/08 10:38:35 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *tmp; 
-    
-    tmp = (unsigned char *)s;
-    while (n > 0)
-    {
-        *tmp = '\0';
-        tmp++;
-        n--;
-    }
+	unsigned char	*tmp;
+
+	tmp = (unsigned char *)s;
+	while (n > 0)
+	{
+		*tmp = '\0';
+		tmp++;
+		n--;
+	}
 }
 
 // #include <stdio.h>

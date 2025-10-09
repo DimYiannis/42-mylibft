@@ -6,7 +6,7 @@
 /*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 23:13:03 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/09 22:48:57 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/09 23:16:52 by yiannis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,9 @@ void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*tmp;
 
-	if (n == 0)
-		return;
 	tmp = (unsigned char *)s;
-	while (n > 0)
-	{
-		*tmp = '\0';
-		tmp++;
-		n--;
-	}
+	while (n--)
+		*tmp++ = '\0';
 }
 
 // #include <stdio.h>

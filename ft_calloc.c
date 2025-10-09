@@ -6,7 +6,7 @@
 /*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 10:29:50 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/09 22:53:28 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/09 23:20:32 by yiannis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,22 @@ static void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*tmp;
 
-	if (n == 0)
-		return;
 	tmp = (unsigned char *)s;
-	while (n > 0)
-	{
-		*tmp = '\0';
-		tmp++;
-		n--;
-	}
+	while (n--)
+		*tmp++ = '\0';
 }
 
 void *calloc(size_t count, size_t size)
 {
-    if (!count || !size)
-	{
+	void *ptr;
+	
+    if (count == 0 || size == 0)
 		return (NULL);
-	}
-	count = (size_t)malloc(sizeof(size_t) * size);
-	if (!count)
-	{
+	if (size != 0 && count * size > SIZE_MAX)
 		return (NULL);
-	}
+	ptr = malloc(count * size);
+	if (!ptr)
+		return (NULL);
 	ft_bzero((void *)count, size);
 	return ((void *)count);
 }

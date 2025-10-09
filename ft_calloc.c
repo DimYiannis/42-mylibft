@@ -6,7 +6,7 @@
 /*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 10:29:50 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/09 22:49:03 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/09 22:53:28 by yiannis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,13 @@ void *calloc(size_t count, size_t size)
 	return ((void *)count);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void)
-{
-	char s1[] = "paokara";
-	char s2[] = calloc((size_t)s1+4,sizeof(char) * 3);
-	printf("%s", s2);
-	free(s2);
-	return (0);
-}
+// int main(void)
+// {
+// 	char s1[] = "paokara";
+// 	char s2[] = calloc((size_t)s1+4,sizeof(char) * 3);
+// 	printf("%s", s2);
+// 	free(s2);
+// 	return (0);
+// }

@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 10:29:50 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/09 23:26:07 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/10 17:18:33 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -23,11 +22,11 @@ static void	ft_bzero(void *s, size_t n)
 		*tmp++ = '\0';
 }
 
-void *calloc(size_t count, size_t size)
+void	*calloc(size_t count, size_t size)
 {
-	void *ptr;
-	
-    if (count == 0 || size == 0)
+	void	*ptr;
+
+	if (count == 0 || size == 0)
 		return (NULL);
 	if (size != 0 && count > SIZE_MAX / size)
 		return (NULL);

@@ -6,13 +6,15 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 17:25:46 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/06 17:37:18 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/11 17:25:24 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *s)
+#include <string.h>
+
+size_t	ft_strlen(const char *s)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (s[len])

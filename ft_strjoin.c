@@ -3,52 +3,52 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 22:43:45 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/10 23:06:04 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/11 12:46:51 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-static int ft_strlen(char *s)
+static int	ft_strlen(char *s)
 {
-    int len;
+	int	len;
 
-    len = 0;
-    while (*s)
-    {
-       len++;
-       s++;         
-    }
-    return (len);
+	len = 0;
+	while (*s)
+	{
+		len++;
+		s++;
+	}
+	return (len);
 }
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    int len1;
-    int len2;
-    char *string;
-    int i;
-    int j;
+	int		len1;
+	int		len2;
+	char	*string;
+	int		i;
+	int		j;
 
-    i = 0;
-    j = 0;
-    len1 = ft_strlen((char *)s1);
-    len2 = ft_strlen((char *)s2);
-    string = malloc(sizeof(char) * (len1 + len2 + 1));
-    if (!string)
-        return (NULL);
-    while (i < len1)
-    {
-        string[i] = s1[i];
-        i++;
-    }
-    while (i < (len1 + len2))
-        string[i++] = s2[j++];
-    string[i] = '\0';
-    return (string);
+	i = 0;
+	j = 0;
+	len1 = ft_strlen((char *)s1);
+	len2 = ft_strlen((char *)s2);
+	string = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (!string)
+		return (NULL);
+	while (i < len1)
+	{
+		string[i] = s1[i];
+		i++;
+	}
+	while (i < (len1 + len2))
+		string[i++] = s2[j++];
+	string[i] = '\0';
+	return (string);
 }
 
 // #include <stdio.h>

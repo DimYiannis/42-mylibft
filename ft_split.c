@@ -6,11 +6,12 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 23:31:12 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/11 15:58:17 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/11 16:30:30 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 static int	count_words(const char *s, char c)
 {
@@ -53,6 +54,19 @@ static void	*free_up(char **arr, int n)
 	free(arr);
 	return (NULL);
 }
+// checking erasure if malloc failes
+static void *xmalloc(size_t size)
+{
+	static int fail_after = 3;
+	static int num_allocs = 0;
+	
+    if (fail_after > 0 && num_allocs++ >= fail_after)
+    {
+        fputs("Out of memory\n", stderr);
+        return 0;
+    }
+    return malloc(size);
+}
 
 static char	**eachword(char *s, char c, char **result)
 {
@@ -64,7 +78,7 @@ static char	**eachword(char *s, char c, char **result)
 	{
 		if (*s != c)
 		{
-			result[i] = malloc(word_length(s, c) + 1);
+			result[i] = xmalloc(word_length(s, c) + 1);
 			if (!result[i])
 				free_up(result, i);
 			j = 0;
@@ -78,21 +92,6 @@ static char	**eachword(char *s, char c, char **result)
 	}
 	result[i] = NULL;
 	return (result);
-}
-
-
-
-static void *xmalloc(size_t size)
-{
-	static int fail_after = 0;
-	static int num_allocs = 0;
-	
-    if (fail_after > 0 && num_allocs++ >= fail_after)
-    {
-        fputs("Out of memory\n", stderr);
-        return 0;
-    }
-    return malloc(size);
 }
 
 char	**ft_split(char const *s, char c)
@@ -133,14 +132,5 @@ int	main(void)
 		printf("%s\n", arr2[i]);
 		i++;
 	}
-
-	int no1 = 5;
-
-    for (fail_after = 0; fail_after < 3; fail_after++)
-    {
-        printf("Fail after: %d\n", fail_after);
-        num_allocs = 0;
-        test_allocation(no1);
-    }
 	return (0);
 }

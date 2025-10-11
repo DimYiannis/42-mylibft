@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 23:31:12 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/11 16:30:30 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/11 23:30:04 by yiannis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,19 +54,6 @@ static void	*free_up(char **arr, int n)
 	free(arr);
 	return (NULL);
 }
-// checking erasure if malloc failes
-static void *xmalloc(size_t size)
-{
-	static int fail_after = 3;
-	static int num_allocs = 0;
-	
-    if (fail_after > 0 && num_allocs++ >= fail_after)
-    {
-        fputs("Out of memory\n", stderr);
-        return 0;
-    }
-    return malloc(size);
-}
 
 static char	**eachword(char *s, char c, char **result)
 {
@@ -107,30 +94,30 @@ char	**ft_split(char const *s, char c)
 	return (result);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-	char str1[] = "hello-----there";
-	char str2[] = "when i wake up in a morning love";
-	char **arr1;
-	char **arr2;
-	int i;
+// int	main(void)
+// {
+// 	char str1[] = "hello-----there";
+// 	char str2[] = "when i wake up in a morning love";
+// 	char **arr1;
+// 	char **arr2;
+// 	int i;
 
-	i = 0;
-	arr1 = ft_split(str1, '-');
-	while (arr1[i])
-	{
-		printf("%s\n", arr1[i]);
-		i++;
-	}
-	i = 0;
-	printf("\n");
-	arr2 = ft_split(str2, ' ');
-	while (arr2[i])
-	{
-		printf("%s\n", arr2[i]);
-		i++;
-	}
-	return (0);
-}
+// 	i = 0;
+// 	arr1 = ft_split(str1, '-');
+// 	while (arr1[i])
+// 	{
+// 		printf("%s\n", arr1[i]);
+// 		i++;
+// 	}
+// 	i = 0;
+// 	printf("\n");
+// 	arr2 = ft_split(str2, ' ');
+// 	while (arr2[i])
+// 	{
+// 		printf("%s\n", arr2[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 10:29:50 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/10 23:48:32 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/11 12:47:44 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include <stdlib.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 static void	ft_bzero(void *s, size_t n)
 {
@@ -28,7 +28,7 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*ptr;
 
 	if (count == 0 || size == 0)
-		return malloc(0);
+		return (malloc(0));
 	if (size != 0 && count > SIZE_MAX / size)
 		return (NULL);
 	ptr = malloc(count * size);
@@ -59,7 +59,7 @@ void	*ft_calloc(size_t count, size_t size)
 //     size_t count = SIZE_MAX;
 //     size_t size = 2;
 
-//     size_t total = count * size; 
+//     size_t total = count * size;
 //     printf("Requested allocation: %zu bytes\n", count * size);
 //     printf("Wrapped-around total: %zu bytes\n", total);
 
@@ -67,18 +67,18 @@ void	*ft_calloc(size_t count, size_t size)
 //     if (!ptr)
 //     {
 //         printf("Malloc failed\n");
-//         return 1;
+//         return (1);
 //     }
 
 //     size_t i;
 //     for (i = 0; i < 10; i++)
 //     {
-//         ptr[i] = 'A'; 
+//         ptr[i] = 'A';
 //         printf("Writing ptr[%zu]\n", i);
 //     }
 
 //     printf("First byte: %c\n", ptr[0]);
 
 //     free(ptr);
-//     return 0;
+//     return (0);
 // }

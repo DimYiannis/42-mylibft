@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 23:31:12 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/11 12:46:30 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/11 15:58:17 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static int	word_length(char *s, char c)
 
 static void	*free_up(char **arr, int n)
 {
-	while (n-- > 0)
+	while (n-- >= 0)
 		free(arr[n]);
 	free(arr);
 	return (NULL);
@@ -80,6 +80,21 @@ static char	**eachword(char *s, char c, char **result)
 	return (result);
 }
 
+
+
+static void *xmalloc(size_t size)
+{
+	static int fail_after = 0;
+	static int num_allocs = 0;
+	
+    if (fail_after > 0 && num_allocs++ >= fail_after)
+    {
+        fputs("Out of memory\n", stderr);
+        return 0;
+    }
+    return malloc(size);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
@@ -93,30 +108,39 @@ char	**ft_split(char const *s, char c)
 	return (result);
 }
 
-// #include <stdio.h>
+#include <stdio.h>
 
-// int	main(void)
-// {
-// 	char str1[] = "hello-----there";
-// 	char str2[] = "when i wake up in a morning love";
-// 	char **arr1;
-// 	char **arr2;
-// 	int i;
+int	main(void)
+{
+	char str1[] = "hello-----there";
+	char str2[] = "when i wake up in a morning love";
+	char **arr1;
+	char **arr2;
+	int i;
 
-// 	i = 0;
-// 	arr1 = ft_split(str1, '-');
-// 	while (arr1[i])
-// 	{
-// 		printf("%s\n", arr1[i]);
-// 		i++;
-// 	}
-// 	i = 0;
-// 	printf("\n");
-// 	arr2 = ft_split(str2, ' ');
-// 	while (arr2[i])
-// 	{
-// 		printf("%s\n", arr2[i]);
-// 		i++;
-// 	}
-// 	return (0);
-// }
+	i = 0;
+	arr1 = ft_split(str1, '-');
+	while (arr1[i])
+	{
+		printf("%s\n", arr1[i]);
+		i++;
+	}
+	i = 0;
+	printf("\n");
+	arr2 = ft_split(str2, ' ');
+	while (arr2[i])
+	{
+		printf("%s\n", arr2[i]);
+		i++;
+	}
+
+	int no1 = 5;
+
+    for (fail_after = 0; fail_after < 3; fail_after++)
+    {
+        printf("Fail after: %d\n", fail_after);
+        num_allocs = 0;
+        test_allocation(no1);
+    }
+	return (0);
+}

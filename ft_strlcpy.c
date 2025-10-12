@@ -3,28 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 21:44:14 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/09 10:24:56 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/12 22:12:43 by yiannis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-
-static void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	unsigned char	*pdst;
-	unsigned char	*psrc;
-
-	if (!dst && !src)
-		return (NULL);
-	pdst = (unsigned char *)dst;
-	psrc = (unsigned char *)src;
-	while (n--)
-		*pdst++ = *psrc++;
-	return (dst);
-}
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -49,9 +36,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 // #include <stdio.h>
 
-// // int main(void)
-// // {
-// // 	char dest[5];
-// // 	size_t len = ft_strlcpy(dest, "paokara", sizeof(dest));
-// // 	printf("dest = \"%s\", returned len = %zu\n", dest, len);
-// // }
+// int main(void)
+// {
+// 	char dest[5];
+// 	size_t len = ft_strlcpy(dest, "paokara", sizeof(dest));
+// 	printf("dest = \"%s\", returned len = %zu\n", dest, len);
+// }

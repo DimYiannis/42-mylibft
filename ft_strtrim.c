@@ -6,7 +6,7 @@
 /*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:01:00 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/12 22:19:40 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/12 22:54:20 by yiannis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
-{
-    const char s[] = "abcdefghijklmnopqrstuvwxyz";
-    const char set[] = "az";
-    char *res = ft_strtrim(s, set);
-    printf("%s", res);
-    free(res);
-    return (0);
-}
+// int main()
+// {
+//     const char s[] = "abcdefghijklmnopqrstuvwxyz";
+//     const char set[] = "az";
+//     char *res = ft_strtrim(s, set);
+//     printf("%s", res);
+//     free(res);
+//     return (0);
+// }

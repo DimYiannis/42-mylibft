@@ -26,17 +26,18 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
     }
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-char a_b(unsigned int n, char s)
-{
-    if (n % 2 == 0)
-        s = ft_toupper(s);
-    return (s);
-}
+// void a_b(unsigned int n, char *s)
+// {
+//     if (n % 2 == 0)
+//         *s = ft_toupper(*s);
+// }
 
-int main(void)
-{
-    char *s = "heloooooo";
-    printf("%s", ft_striteri(s, &a_b)); 
-}
+// int main(void)
+// {
+//     char s[] = "heloooooo";
+//      ft_striteri(s, a_b);
+//     printf("%s",s); 
+//     return 0;
+// }

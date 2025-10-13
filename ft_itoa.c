@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 10:35:31 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/13 11:30:45 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/13 15:29:41 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,19 @@ static int	countDigits(int n)
 	return (count);
 }
 
+static char	*get_single_dig(char *s, int n, int len)
+{
+	if (n > 9)
+	{
+		get_single_dig(s, n / 10, len);
+		*s++ = n % 10 + '0';
+	}
+	else
+		*s++ = n + '0';
+	s += 1;
+	return (s);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*s;
@@ -34,22 +47,20 @@ char	*ft_itoa(int n)
 	if (n < 0)
 	{
 		s = malloc(sizeof(char *) * (len + 2));
+		if (!s)
+			return (NULL);
+		*s = '-';
+		get_single_dig(s + 1, -n, len);
 	}
 	else if (n > 9)
 	{
-		ft_itoa(n / 10);
 		s = malloc(sizeof(char *) * (len + 1));
 		if (!s)
 			return (NULL);
-		*s = n / 10 + '0';
+		get_single_dig(s, n, len);
 	}
-	else
-	{
-		s = malloc(sizeof(char *) * (len + 1));
-		if (!s)
-			return (NULL);
-		*s = n + '0';
-	}
+	*s = '\0';
+	s -= len;
 	return (s);
 }
 

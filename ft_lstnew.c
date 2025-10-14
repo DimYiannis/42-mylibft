@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:40:37 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/14 09:59:49 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/14 10:15:19 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,29 @@
 
 t_list *ft_lstnew(void *content)
 {
-    struct s_list *newnode;
-    struct s_list *tmp;
+    t_list *header;
+    int data;
 
-    newnode = (struct s_list *)malloc(sizeof(struct s_list));
-    if (!newnode)
+    data = content;
+    header = (struct s_list *)malloc(sizeof(t_list));
+    if (!header)
         return (NULL);
-    newnode->content = t_list->content;
-    newnode->next = NULL;
-    return (newnode);
+    header->content = data;
+    header->next = NULL;
+    return (header);
 }
 
 #include <stdio.h>
 
 int main(void)
 {
-    struct t_list *tmp;
+    t_list *head;
+    if (!head)
+    {
+        printf("empty");
+        return 0;
+    }
     int n = 6;
-    tmp = ft_lstnew(n);
-    printf("%d", tmp.content);
+    head = ft_lstnew(&n);
+    printf("%d", head->content);
 }

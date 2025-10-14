@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:44:08 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/14 17:45:54 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/14 19:50:00 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,16 +77,14 @@ int	ft_lstsize(t_list *lst)
 //     while (tmp != NULL)
 //     {
 //         printf("%d", *(int *)tmp->content);
-// 		 tmp = tmp->next;
+// 			tmp = tmp->next;
 //     }
 
 // }
 
 // int	main(void)
 // {
-//     t_list *lst;
-
-//     lst = malloc(sizeof(t_list));
+//     t_list *lst = malloc(sizeof(t_list));
 // 	if (lst == NULL)
 // 	{
 // 		printf("memory alloc failed \n");

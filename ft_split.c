@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 23:31:12 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/11 23:30:04 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/14 12:06:02 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static char	**eachword(char *s, char c, char **result)
 	{
 		if (*s != c)
 		{
-			result[i] = xmalloc(word_length(s, c) + 1);
+			result[i] = malloc(word_length(s, c) + 1);
 			if (!result[i])
 				free_up(result, i);
 			j = 0;

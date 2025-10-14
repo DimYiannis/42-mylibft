@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:40:37 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/14 15:43:49 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/14 16:20:32 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(void *content)
 	header = (struct s_list *)malloc(sizeof(t_list));
 	if (!header)
 		return (NULL);
-	(*header).content = content;
+	header->content = content;
 	header->next = NULL;
 	return (header);
 }

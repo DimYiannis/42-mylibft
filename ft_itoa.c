@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 10:35:31 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/14 12:07:59 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/14 19:46:22 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_itoa(int n)
 		num = -num;
 		sign = 1;
 	}
-	len = countDigits(n) + sign;
+	len = count_digits(n) + sign;
 	s = malloc(len + 1);
 	if (!s)
 		return (NULL);

@@ -3,37 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 21:17:34 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/13 22:18:07 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/14 12:11:14 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    size_t len;
-    char *result;
-    unsigned int i;
-    
-    i = 0;
-    len = 0;
-    if (!s || !f)
-        return (NULL);
-    while (s[len])
-        len++;
-    result = (char *)malloc(len + 1);
-    if (!result)
-        return (NULL);
-    while (i < len)
-    {
-        result[i] = f(i, s[i]);
-        i++;
-    }
-    result[len] = '\0';
-    return (result);
+	size_t			len;
+	char			*result;
+	unsigned int	i;
+
+	i = 0;
+	len = 0;
+	if (!s || !f)
+		return (NULL);
+	while (s[len])
+		len++;
+	result = (char *)malloc(len + 1);
+	if (!result)
+		return (NULL);
+	while (i < len)
+	{
+		result[i] = f(i, s[i]);
+		i++;
+	}
+	result[len] = '\0';
+	return (result);
 }
 
 // #include <stdio.h>
@@ -48,5 +48,5 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 // int main(void)
 // {
 //     char *s = "heloooooo";
-//     printf("%s", ft_strmapi(s, a_b)); 
+//     printf("%s", ft_strmapi(s, a_b));
 // }

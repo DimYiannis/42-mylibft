@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 10:35:31 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/13 21:12:58 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/14 12:07:59 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-static int	countDigits(int n)
+static int	count_digits(int n)
 {
 	int	count;
 
@@ -30,7 +30,7 @@ char	*ft_itoa(int n)
 	char	*s;
 	int		len;
 	long	num;
-	int sign;
+	int		sign;
 
 	sign = 0;
 	num = n;
@@ -54,9 +54,9 @@ char	*ft_itoa(int n)
 	return (s);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-	printf(" %s", ft_itoa(111));
-}
+// int	main(void)
+// {
+// 	printf(" %s", ft_itoa(111));
+// }

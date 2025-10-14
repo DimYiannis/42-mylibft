@@ -6,7 +6,7 @@
 /*   By: yiannis <yiannis@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 22:46:53 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/13 23:57:54 by yiannis          ###   ########.fr       */
+/*   Updated: 2025/10/14 09:36:52 by yiannis          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <unistd.h>
+
+typedef struct s_list
+{
+    void *content;
+    struct s_list *next;
+} t_list;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);

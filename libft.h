@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 22:46:53 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/14 23:31:22 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/15 09:28:54 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,8 @@ void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstadd_back(t_list **lst, t_list *new);
+void				ft_lstadd_back(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);
-void ft_lstdelone(t_list *lst, void (*del)(void*));
-
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
 
 #endif

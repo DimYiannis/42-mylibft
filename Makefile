@@ -3,10 +3,6 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
-SRC_DIR = .
-OBJ_DIR = obj
-INC_DIR = .
-
 TARGET = libft.a
 SRC = $(wildcard $(SRCDIR))/*.c
 OBJ = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))

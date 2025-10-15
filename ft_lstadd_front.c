@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:56:15 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/15 10:17:07 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/15 10:21:38 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
-		return;
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

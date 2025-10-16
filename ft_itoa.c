@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 10:35:31 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/14 19:46:22 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/16 20:49:24 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static int	count_digits(int n)
 {
 	int	count;
 
+	if (n == 0)
+    	return (1);
 	count = 0;
 	while (n != 0)
 	{
@@ -58,5 +60,11 @@ char	*ft_itoa(int n)
 
 // int	main(void)
 // {
-// 	printf(" %s", ft_itoa(111));
+//  	printf("%s\n", ft_itoa(111));
+//  	printf("%s\n", ft_itoa(0));
+//     printf("%s\n", ft_itoa(5));
+//     printf("%s\n", ft_itoa(-5));
+//     printf("%s\n", ft_itoa(12345));
+//     printf("%s\n", ft_itoa(-12345));
+//     printf("%s\n", ft_itoa(-2147483648));
 // }

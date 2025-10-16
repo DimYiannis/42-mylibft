@@ -6,12 +6,12 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 23:31:12 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/14 12:06:02 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/16 09:42:04 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 static int	count_words(const char *s, char c)
 {
@@ -67,7 +67,7 @@ static char	**eachword(char *s, char c, char **result)
 		{
 			result[i] = malloc(word_length(s, c) + 1);
 			if (!result[i])
-				free_up(result, i);
+				return (free_up(result, i - 1));
 			j = 0;
 			while (*s && *s != c)
 				result[i][j++] = *s++;

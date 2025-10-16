@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 14:15:58 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/08 10:36:52 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/16 14:02:23 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_atoi(const char *str)
 	int	counter;
 
 	counter = 0;
-	sign = 0;
+	sign = 1;
 	num = 0;
 	while (ft_isspace(*str) == 1)
 		str++;
@@ -58,16 +58,16 @@ int	ft_atoi(const char *str)
 	return (num * sign);
 }
 
-// #include <stdio.h>
-// #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-// int	main(void)
-// {
-// 	int val;
-// 	char *str;
-// 	str = "+---15+09.10E";
-// 	val = ft_atoi(str);
-// 	printf("integral number = %d \n", val);
-// 	val = atoi(str);
-// 	printf("integral number = %d", val);
-// }
+int	main(void)
+{
+	int val;
+	char *str;
+	str = "945";
+	val = ft_atoi(str);
+	printf("integral number = %d \n", val);
+	val = atoi(str);
+	printf("integral number = %d", val);
+}

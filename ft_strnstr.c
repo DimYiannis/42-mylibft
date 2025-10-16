@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 19:15:45 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/13 10:32:44 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:17:42 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 		return ((char *)haystack);
 	while (*haystack && n > 0)
 	{
-		if (ft_strncmp(haystack, needle, needle_len) == 0)
+		if (ft_strncmp(haystack, needle, needle_len) == 0 && needle_len <= n)
 			return ((char *)haystack);
 		else
 		{
@@ -37,10 +37,12 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 // #include <stdio.h>
+// #include <bsd/string.h>
 
 // int	main(void)
 // {
-// 	char	s1[10] = "aaaabaaa";
-// 	char	s2[6] = "ab";
-// 	printf("%s", ft_strnstr(s1, s2, 6));
+// 	char	s1[] = "MZIRIBMZIRIBMZE123";
+// 	char	s2[] = "MZIRIBMZE";
+// 	printf("%s \n", ft_strnstr(s1, s2, 9));
+// 	printf("proper one:   %s", strnstr(s1, s2, 9));
 // }

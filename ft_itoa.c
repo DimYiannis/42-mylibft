@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 10:35:31 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/16 20:49:24 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/17 18:36:22 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	count_digits(int n)
 	int	count;
 
 	if (n == 0)
-    	return (1);
+		return (1);
 	count = 0;
 	while (n != 0)
 	{

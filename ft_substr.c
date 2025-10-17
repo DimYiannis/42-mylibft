@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 23:06:50 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/16 20:37:47 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/17 18:36:35 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	slen = ft_strlen(s);
 	if (start >= slen)
 		return (ft_strdup(""));
-	if (len > slen -start)
+	if (len > slen - start)
 		len = slen - start;
 	string = malloc(len + 1);
 	if (!string)

@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 11:00:51 by ydimitra          #+#    #+#             */
-/*   Updated: 2025/10/08 13:50:16 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/17 19:06:33 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	pdst = (unsigned char *)dst;
 	psrc = (unsigned char *)src;
+	if (!dst && !src)
+		return (NULL);
 	if (pdst <= psrc)
 	{
 		while (len--)

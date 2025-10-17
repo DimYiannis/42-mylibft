@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 22:46:53 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/15 18:03:17 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/17 20:21:11 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,7 @@ void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+t_list				*ft_lstlast(t_list *lst);
+void				ft_lstiter(t_list *lst, void (*f)(void *));
 
 #endif

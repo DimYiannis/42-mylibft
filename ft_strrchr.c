@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 23:29:05 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/17 20:04:10 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/17 20:13:26 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	*index;
 	unsigned char ch;
 
-	ch = (unsigned char c);
+	ch = (unsigned char) c;
 	index = NULL;
 	while (*s)
 	{

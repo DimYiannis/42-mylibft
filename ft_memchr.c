@@ -6,7 +6,7 @@
 /*   By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 23:36:04 by yiannis           #+#    #+#             */
-/*   Updated: 2025/10/16 14:50:20 by ydimitra         ###   ########.fr       */
+/*   Updated: 2025/10/17 19:15:38 by ydimitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		str++;
 	}
 	if (ch == '\0')
-		return ((unsigned *)str);
+		return (NULL);
 	return (NULL);
 }
 

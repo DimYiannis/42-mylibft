@@ -6,7 +6,7 @@
 #    By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 09:01:22 by ydimitra          #+#    #+#              #
-#    Updated: 2025/10/18 12:23:03 by ydimitra         ###   ########.fr        #
+#    Updated: 2025/10/18 12:49:45 by ydimitra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ ft_lstlast_bonus.c ft_lstmap_bonus.c
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 	
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@ 
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
@@ -50,3 +50,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re bonus

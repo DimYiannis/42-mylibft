@@ -6,11 +6,11 @@
 #    By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 09:01:22 by ydimitra          #+#    #+#              #
-#    Updated: 2025/10/18 12:49:45 by ydimitra         ###   ########.fr        #
+#    Updated: 2025/10/18 13:16:28 by ydimitra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a

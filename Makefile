@@ -6,7 +6,7 @@
 #    By: ydimitra <ydimitra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 09:01:22 by ydimitra          #+#    #+#              #
-#    Updated: 2025/10/16 12:55:48 by ydimitra         ###   ########.fr        #
+#    Updated: 2025/10/18 12:23:03 by ydimitra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,5 +50,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re bonus
